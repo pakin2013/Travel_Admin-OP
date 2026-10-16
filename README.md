@@ -43,7 +43,7 @@ npm run build
    - `CLOUDFLARE_ACCOUNT_ID` — Account ID
 4. Push commit ไปยัง branch `main` (หรือ rerun workflow ใน GitHub Actions) เพื่อให้ deployment เริ่มทำงาน
 
-GitHub Actions จะ build หน้าเว็บ, สร้าง Worker และ D1 database หากยังไม่มี, apply migration สำหรับ schema/ข้อมูลตัวอย่าง และ deploy เว็บไปยัง URL `workers.dev` ที่ Cloudflare แสดงในหน้า Worker โดยไม่ต้องใส่ database ID ใน repository.
+GitHub Actions จะ build หน้าเว็บ, deploy Worker, apply migration สำหรับ schema/ข้อมูลตัวอย่าง และ deploy เว็บไปยัง URL `workers.dev` ที่ Cloudflare แสดงในหน้า Worker. D1 database name และ ID ต้องตรงกับฐานข้อมูลที่สร้างไว้ใน Cloudflare.
 
 ใน Cloudflare Dashboard สามารถดู URL ได้ที่ **Workers & Pages → travel-admin-op → Settings**. ตารางและข้อมูลเริ่มต้นกำหนดไว้ใน `migrations/0001_create_places.sql`. ข้อมูล production จะอยู่ใน D1; SQLite ใน `data/travel.sqlite` ใช้เฉพาะ local Express development.
 

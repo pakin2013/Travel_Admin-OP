@@ -13,7 +13,7 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "travel-admin-op-db",
+      "database_name": "travel",
       "database_id": "008fefe5-3c1b-4147-903f-90b53e02436d",
       "migrations_dir": "migrations"
     }
